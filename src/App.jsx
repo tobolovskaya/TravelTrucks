@@ -2,9 +2,9 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppBarr from './components/AppBarr/AppBarr';
 
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const CatalogPage = React.lazy(() => import('./pages/CatalogPage'));
-const CamperDetailsPage = React.lazy(() => import('./pages/CamperDetailsPage'));
+const HomePage = React.lazy(() => import('./pages/HomePage/HomePage'));
+const CatalogPage = React.lazy(() => import('./pages/CatalogPage/CatalogPage'));
+const CamperDetailsPage = React.lazy(() => import('./pages/CamperDetailsPage/CamperDetailsPage'));
 
 function App() {
   return (
