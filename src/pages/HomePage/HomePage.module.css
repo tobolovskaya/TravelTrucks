@@ -4,7 +4,6 @@
   justify-content: center;
   height: 100vh;
   background-color: #f7f7f7;
-  gap: 80px;
 }
 
 .banner {
@@ -23,7 +22,7 @@
   bottom: 50px;
   max-width: 600px;
   color: white;
-  
+  gap: 40px;
 }
 
 .bannerTitle {
