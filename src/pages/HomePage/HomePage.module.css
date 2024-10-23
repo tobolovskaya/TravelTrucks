@@ -7,7 +7,7 @@
   }
   
   .banner {
-    background-image: url('https://path-to-your-image'); /* URL банера */
+    background-image: url('https://s3-alpha-sig.figma.com/img/66b3/d74b/24c0292d5f6fc639a2ab802af8888c21?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oaovmyCbInF3laWAzgJbUMxR487CuxRSs1cAeUl4hFR4SHZq1LjA48SbzIVdhUN4QZ~K7b~OpSVbSB7dsgLG6y9pmaxFiiTtBdW1k-tllZ45zLO~ZdmRVlBfTnTRRls5nwcMsxDg7sBtE1ev7tlsWkoRhBVpEMCoifG4JmrQq39bLmsRQxwARMntmcy~oBeqTzFWvn4AMe7onTm7odmWMqnJGVVwPS8tXpWI-UstjnSrCS84zd2dCvaqMsOuC2eKQwSmUnl8VF~4RQS0NwewSVfFEGSxXSKnOROdG3PeMGgHDNzCnUaoqISrFNa7WivR2Uo8RmlOrer44c-7phJJhQ__'); /* URL банера */
     background-size: cover;
     background-position: center;
     width: 100%;
