@@ -1,0 +1,21 @@
+.header {
+    background-color: #101828;
+    padding: 10px 20px;
+  }
+  
+  .header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .header a:hover {
+    text-decoration: underline;
+  }
+  
