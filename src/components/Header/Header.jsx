@@ -1,19 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.module.css';  // Створимо файл стилів для хедера
+import { NavLink } from 'react-router-dom';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/catalog">Catalog</Link>
-          </li>
-        </ul>
+    <header className={styles.header}>
+      <NavLink to="/" className={styles.logo}>
+        TravelTrucks
+      </NavLink>
+      <nav className={styles.nav}>
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => isActive ? styles.activeNavLink : styles.navLink}
+        >
+          Home
+        </NavLink>
+        <NavLink 
+          to="/catalog" 
+          className={({ isActive }) => isActive ? styles.activeNavLink : styles.navLink}
+        >
+          Catalog
+        </NavLink>
       </nav>
     </header>
   );
