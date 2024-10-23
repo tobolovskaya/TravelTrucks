@@ -13,17 +13,20 @@
   width: 100%;
   height: 100%;
   position: relative;
+  background-repeat: no-repeat;
   transform: scaleX(-1); 
   z-index: 1;
 }
 
 .bannerContent {
-  position: absolute;
+  position: relative;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  padding-top: 200px;
 }
 
 .bannerTitle {
