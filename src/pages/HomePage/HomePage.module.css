@@ -18,11 +18,13 @@
 
 .bannerContent {
   position: absolute;
-  left: 50px;
+  left: 64px;
   bottom: 50px;
   max-width: 600px;
   color: white;
   gap: 40px;
+  margin-top: 260px;
+
 }
 
 .bannerTitle {
