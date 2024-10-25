@@ -1,25 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './AppBarr.module.css';
+import { Outlet } from "react-router-dom";
+import { Suspense } from "react";
+import { StyledLink, HeaderContainer, Header, LogoWrapper, NavWrapper } from "./AppBarr.styled";
 
-const AppBarr = () => {
+
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import Logo from "../Logo/Logo";
+import Loader from "../Loader/Loader";
+
+const SharedLayout = ({ toggleTheme }) => {
+
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <h1 className={styles.logo}>TravelTrucks</h1>
-        <nav>
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link to="/" className={styles.navLink}>Home</Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link to="/catalog" className={styles.navLink}>Catalog</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <>
+      <Header>
+        <HeaderContainer>
+     <LogoWrapper>
+      <Logo />
+      </LogoWrapper>
+        <NavWrapper>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/catalog">Catalog</StyledLink>
+        </NavWrapper>
+        <ThemeToggle toggleTheme={toggleTheme} />
+        </HeaderContainer>
+      </Header>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
+    </>
   );
 };
 
-export default AppBarr;
+export default SharedLayout;
