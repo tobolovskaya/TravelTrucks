@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import SharedLayout from "./components/AppBarr/AppBarr";
+import AppBarr from "./components/AppBarr/AppBarr";
 import HomePage from "./pages/HomePage/HomePage";
 import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
