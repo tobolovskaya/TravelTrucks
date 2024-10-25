@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import AppBarr from "./components/AppBarr/AppBarr";
+import SharedLayout from "./components/SharedLayout/SharedLayout";
 import HomePage from "./pages/HomePage/HomePage";
 import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
@@ -8,7 +8,7 @@ import CamperDetailsPage from "./pages/CamperDetailsPage/CamperDetailsPage";
 function App({ toggleTheme }) {
   return (
     <Routes>
-      <Route path="/" element={<AppBarr toggleTheme={toggleTheme} />}>
+      <Route path="/" element={<SharedLayout toggleTheme={toggleTheme} />}>
         <Route index element={<HomePage />} />
         <Route path="catalog/:id" element={<CamperDetailsPage />} />
         <Route path="catalog" element={<CatalogPage />} />

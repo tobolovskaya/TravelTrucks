@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-import { StyledLink, HeaderContainer, Header, LogoWrapper, NavWrapper } from "./AppBarr.styled";
+import { StyledLink, HeaderContainer, Header, LogoWrapper, NavWrapper } from "./SharedLayout.styled";
 
 
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
