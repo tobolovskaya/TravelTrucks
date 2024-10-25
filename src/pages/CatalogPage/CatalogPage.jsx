@@ -5,7 +5,7 @@ import { fetchAllCampers } from "../../redux/campers/operations";
 import { CatalogContainer, CatalogSection } from "./CatalogPage.styled";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import ItemList from "../../components/ItemList/ItemList";
-import { MainContent } from "../../components/SharedLayout/SharedLayout.styled";
+import { MainContent } from "../../components/Layout/Layout";
 
 
 const CatalogPage = () => {

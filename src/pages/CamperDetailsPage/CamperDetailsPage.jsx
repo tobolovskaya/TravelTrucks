@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import BookCamperForm from '../../components/BookCamperForm/BookCamperForm';
-import { MainContent } from '../../components/SharedLayout/SharedLayout.styled';
+import { MainContent } from '../../components/Layout/Layout';
 import Features from '../../components/Features/Features';
 import { useSelector } from 'react-redux';
 import { selectCampers } from '../../redux/campers/selectors';
