@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectCampers, selectIsLoading } from "../../redux/campers/selectors";
+import { selectCampers } from "../../redux/campers/selectors";
 import { useEffect } from "react";
 import { fetchAllCampers } from "../../redux/campers/operations";
 import { CatalogContainer, CatalogSection } from "./CatalogPage.styled";
@@ -11,7 +11,6 @@ import { MainContent } from "../../components/SharedLayout/SharedLayout.styled";
 const CatalogPage = () => {
 const dispatch = useDispatch(); 
 const campers = useSelector(selectCampers);
-const loading = useSelector(selectIsLoading);
 
 useEffect(() => {
   dispatch(fetchAllCampers());
