@@ -1,20 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCampers, fetchAllCampers } from "./operations";
-
-const initialState = {
-   campers: {
-     items: [],
-     favorites: [],
-     isLoading: false,
-     error: null,
-   },
-   filter: {
-     location: "",
-     equipment: "",
-     type: "",
-   },
- };
-
+import { initialState } from './initialState';
 
 const campersSlice = createSlice({
    name: "campers",
