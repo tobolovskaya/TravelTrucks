@@ -1,8 +1,8 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './Layout/Layout'
-import Loader from './Loader/Loader';
+import Layout from "./components/Layout/Layout";
+import Loader from './components/Loader/Loader';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
