@@ -1,23 +1,32 @@
-import { useParams } from 'react-router-dom';
-import BookCamperForm from '../../components/BookCamperForm/BookCamperForm';
-import { MainContent } from '../../components/Layout/Layout';
-import Features from '../../components/Features/Features';
-import { useSelector } from 'react-redux';
-import { selectCampers } from '../../redux/campers/selectors';
 
-export default function CamperDetailsPage() {
-  const { id } = useParams(); 
-  console.log("id", id);
-  const campers = useSelector(selectCampers);
-  const camperItems = campers?.items || [];
-  console.log("camperItems", camperItems);
-  const camper = camperItems.find(camper => camper.id === id);
-  console.log("camper", camper);
+import { Helmet } from "react-helmet-async"
+import { useDispatch} from "react-redux";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { fetchTruckDetails } from "../../redux/truck/operations";
+import css from "./CamperDetailsPage.module.css"
+import DetailedInfo from "../../components/DetailedInfo/DetailedInfo";
+import { Toaster } from "react-hot-toast";
 
- return (
-   <MainContent>
-    <Features/>
-     <BookCamperForm/>
-   </MainContent>
- )
+const DetailsPage = () => {
+     const dispatch = useDispatch();
+     const { id } = useParams();
+     
+  useEffect(() => {
+   dispatch(fetchTruckDetails(id));
+  }, [dispatch,id]);
+   
+  return (
+      <>
+          <Helmet>
+              <title>Details Page</title>
+          </Helmet>
+          <Toaster position="top-center" reverseOrder={false} />
+          <section className={css.detailed_container} >
+               <DetailedInfo/> 
+          </section>
+      </>
+  )
 }
+
+export default DetailsPage
