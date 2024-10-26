@@ -1,33 +1,24 @@
-import { Outlet } from "react-router-dom";
-import { Suspense } from "react";
-import { StyledLink, HeaderContainer, Header, LogoWrapper, NavWrapper } from "./Layout";
+import css from './Layout.module.css'
+import Navigation from '../Navigation/Navigation'
+import Logo from '../Logo/Logo'
+import { Outlet } from 'react-router-dom'
 
 
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import Logo from "../Logo/Logo";
-import Loader from "../Loader/Loader";
-
-const SharedLayout = ({ toggleTheme }) => {
-
-  return (
+const Layout = () => {
+    return (
     <>
-      <Header>
-        <HeaderContainer>
-     <LogoWrapper>
-      <Logo />
-      </LogoWrapper>
-        <NavWrapper>
-          <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/catalog">Catalog</StyledLink>
-        </NavWrapper>
-        <ThemeToggle toggleTheme={toggleTheme} />
-        </HeaderContainer>
-      </Header>
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
-    </>
-  );
-};
+           <header className={css.header}>
+                  <Logo/>
+                  <Navigation/>
+          </header>
+             <main>
+                <Outlet />
+             </main>
+     
+        </>
+    
+    
+  )
+}
 
-export default SharedLayout;
+export default Layout
