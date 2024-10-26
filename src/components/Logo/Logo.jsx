@@ -1,12 +1,14 @@
-import React from 'react'
-// import { useTheme } from "styled-components";
-import Icon from '../Icon/Icon'
-
-export default function Logo() {
-  // const theme = useTheme();
+import css from './Logo.module.css';
+import icons from '../../assets/sprite.svg';
+import { Link } from 'react-router-dom';
+const Logo = () => {
   return (
-    <>
-      <Icon name="logo" width={136} height={16} />
-    </>
+      <Link to="/" className={css.logo}>
+          <svg width="136" height="16" >
+            <use href={`${icons}#Logo`} />
+          </svg>
+      </Link>
   )
 }
+
+export default Logo
