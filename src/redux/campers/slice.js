@@ -1,54 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchCampers, fetchAllCampers } from "./operations";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchTruckDetails, fetchTrucks } from './operations';
 import { initialState } from './initialState';
 
-const campersSlice = createSlice({
-   name: "campers",
-  initialState,
-  reducers: {
-    setLocation(state, action) {
-      state.filter.location = action.payload;
-    },
-    setEquipment(state, action) {
-      state.filter.equipment = action.payload;
-    },
-    setType(state, action) {
-      state.filter.type = action.payload;
-    },
-  },
-  extraReducers: (builder) => {
+const handleRejected = (state, action) => {
+  state.isLoading = false;
+  state.error = action.payload;
+};
+
+const handlePending = state => {
+  state.isLoading = true;
+  state.error = null;
+};
+
+const truckSlice = createSlice({
+  name: 'trucks',
+  initialState: initialState,
+  extraReducers: builder => {
     builder
-      .addCase(fetchCampers.pending, (state) => {
-        state.campers.isLoading = true;
+      .addCase(fetchTrucks.pending,handlePending)
+      .addCase(fetchTrucks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.trucks = action.payload.items;
       })
-      .addCase(fetchCampers.fulfilled, (state, action) => {
-        state.campers.isLoading = false;
-        state.campers.error = null;
-        const newItems = action.payload.map((item) => ({
-          ...item,
-        }));
-        state.campers.items = [...state.campers.items, ...newItems];
-        console.log('Campers fetched successfully:', state.campers.items);
+          .addCase(fetchTrucks.rejected, handleRejected)
+      .addCase(fetchTruckDetails.pending,handlePending)
+      .addCase(fetchTruckDetails.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.truck = action.payload;
       })
-      .addCase(fetchCampers.rejected, (state, action) => {
-        state.campers.isLoading = false;
-        state.campers.error = action.payload;
-      })
-      .addCase(fetchAllCampers.pending, (state) => {
-        state.campers.isLoading = true;
-      })
-      .addCase(fetchAllCampers.fulfilled, (state, action) => {
-        state.campers.isLoading = false;
-        state.campers.error = null;
-        state.campers.items = action.payload;
-        console.log('Fetched campers:', action.payload);
-      })
-      .addCase(fetchAllCampers.rejected, (state, action) => {
-        state.campers.isLoading = false;
-        state.campers.error = action.payload;
-      });
+      .addCase(fetchTruckDetails.rejected, handleRejected);
   },
 });
 
-export const campersReducer = campersSlice.reducer;
-export const { setLocation, setEquipment, setType } = campersSlice.actions;
+export const truckReducer = truckSlice.reducer;

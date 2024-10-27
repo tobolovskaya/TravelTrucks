@@ -1,40 +1,28 @@
-import axios from "axios";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { URL } from "../../services/apiService";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { instance } from '../../utils/axios';
 
-export const fetchAllCampers = createAsyncThunk(
-   "campers/fetchAllCampers",
-   async (_, thunkAPI) => {
-     try {
-       const res = await axios.get(`${URL}/campers`);
-       return res.data;
-     } catch (error) {
-      console.log("Error while fetching data:", error);
-       return thunkAPI.rejectWithValue(error.message);
-     }
-   }
- );
-
-export const fetchCampers = createAsyncThunk(
-  "campers/fetchCampers",
-  async (page = 1, thunkAPI) => {
+export const fetchTrucks = createAsyncThunk(
+  'trucks/fetchAll',
+  async (_, thunkApi) => {
     try {
-      const res = await axios.get(`${URL}/campers?page=${page}&limit=4`);
-      return res.data;
+      const response = await instance.get('/campers');
+        console.log(response.data);
+      return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkApi.rejectWithValue(error.message);
     }
   }
 );
 
-export const fetchCamperById = createAsyncThunk(
-   "campers/fetchCamperById",
-   async (id, thunkAPI) => {
-     try {
-       const res = await axios.get(`${URL}/campers/${id}`);
-       return res.data;
-     } catch (error) {
-       return thunkAPI.rejectWithValue(error.message);
-     }
-   }
- );
+export const fetchTruckDetails = createAsyncThunk(
+  'trucks/fetchById',
+    async (id, thunkApi) => {
+    try {
+      const response = await instance.get(`/campers/${id}`);
+        console.log(response);
+      return response.data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
