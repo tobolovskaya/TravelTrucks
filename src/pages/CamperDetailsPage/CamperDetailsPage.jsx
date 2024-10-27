@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async"
 import { useDispatch} from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { fetchTruckDetails } from "../../redux/truck/operations";
+import { fetchTruckDetails } from "../../redux/campers/operations";
 import css from "./CamperDetailsPage.module.css"
 import DetailedInfo from "../../components/DetailedInfo/DetailedInfo";
 import { Toaster } from "react-hot-toast";

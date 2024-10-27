@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import ClientForm from '../ClientForm/ClientForm'
 import css from './TruckReviews.module.css'
-import { selectTruck } from '../../redux/truck/selectors';
+import { selectTruck } from '../../redux/campers/selectors';
 import icons from '../../assets/sprite.svg';
 import { nanoid } from 'nanoid'; 
 

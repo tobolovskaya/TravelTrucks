@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import css from './DetailedInfo.module.css'
-import { selectTruck } from '../../redux/truck/selectors';
+import { selectTruck } from '../../redux/campers/selectors';
 import icons from '../../assets/sprite.svg';
 import clsx from "clsx"
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom';

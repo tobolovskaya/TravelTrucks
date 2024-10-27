@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import ClientForm from '../ClientForm/ClientForm'
 import Features from '../Features/Features'
 import css from './TruckFeatures.module.css'
-import { selectTruck } from '../../redux/truck/selectors';
+import { selectTruck } from '../../redux/campers/selectors';
 const TruckFeatures = () => {
     const truck = useSelector(selectTruck);
   return (

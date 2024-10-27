@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async"
 import { useDispatch, useSelector} from "react-redux";
-import { fetchTrucks } from "../../redux/truck/operations";
+import { fetchTrucks } from "../../redux/campers/operations";
 import TruckList from "../../components/TruckList/TruckList";
 import Filters from "../../components/Filters/Filters";
 import css from "./CatalogPage.module.css"
 import { selectFilteredTrucks } from "../../redux/filters/selectors";
-import { isLoading } from "../../redux/truck/selectors";
+import { isLoading } from "../../redux/campers/selectors";
 
 
 const CatalogPage = () => {

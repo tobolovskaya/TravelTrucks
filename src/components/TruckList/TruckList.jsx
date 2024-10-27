@@ -2,7 +2,7 @@
 import css from "./TruckList.module.css";
 import TruckItem from "../TruckItem/TruckItem";
 import { useSelector } from "react-redux";
-import { isLoading } from "../../redux/truck/selectors";
+import { isLoading } from "../../redux/campers/selectors";
 import Loader from "../Loader/Loader";
 
 const TruckList = ({filteredTrucks}) => {
