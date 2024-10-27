@@ -6,8 +6,8 @@ import Loader from './components/Loader/Loader';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
-const DetailsPage = lazy(() => import('./pages/CamperDetailsPage/CamperDetailsPage'));
-const NotFoundPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
+const CamperDetailsPage = lazy(() => import('./pages/CamperDetailsPage/CamperDetailsPage'));
+const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 
 function App() { 
   return (
