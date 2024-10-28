@@ -1,8 +1,26 @@
-# React + Vite
+# TravelTrucks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Це веб-додаток для оренди кемперів, який дозволяє переглядати всі доступні транспортні засоби, фільтрувати за критеріями, а також переглядати детальну інформацію про кожен кемпер.
 
-Currently, two official plugins are available:
+## Технології
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** з використанням бандлера **Vite**
+- **Redux** для управління станом
+- **React Router** для маршрутизації
+- **Axios** для роботи з API-запитами
+- **Styled Components / CSS Modules / MUI** для стилізації
+- **ESLint**, **Prettier** для підтримки чистого коду
+- **Husky** для запуску перевірок перед комітом
+
+## Вимоги
+
+Для запуску цього проекту вам потрібно мати встановлені наступні інструменти:
+
+- [Node.js](https://nodejs.org/) (версія 16 або новіша)
+- [NPM](https://www.npmjs.com/) або [Yarn](https://yarnpkg.com/)
+
+## Локальний запуск
+
+1. **Клонувати репозиторій**:
+   ```bash
+   git clone https://github.com/your-username/TravelTrucks.git
