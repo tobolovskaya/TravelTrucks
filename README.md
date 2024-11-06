@@ -1,26 +1,27 @@
 # TravelTrucks
 
-Це веб-додаток для оренди кемперів, який дозволяє переглядати всі доступні транспортні засоби, фільтрувати за критеріями, а також переглядати детальну інформацію про кожен кемпер.
+**TravelTrucks** is a web application for renting campers, allowing users to browse all available vehicles, filter by specific criteria, and view detailed information for each camper.
 
-## Технології
+## Technologies Used
 
-- **React** з використанням бандлера **Vite**
-- **Redux** для управління станом
-- **React Router** для маршрутизації
-- **Axios** для роботи з API-запитами
-- **Styled Components / CSS Modules / MUI** для стилізації
-- **ESLint**, **Prettier** для підтримки чистого коду
-- **Husky** для запуску перевірок перед комітом
+- **React** with **Vite** for bundling
+- **Redux** for state management
+- **React Router** for routing
+- **Axios** for API requests
+- **Styled Components / CSS Modules / MUI** for styling
+- **ESLint** and **Prettier** for code quality and formatting
+- **Husky** for pre-commit checks
 
-## Вимоги
+## Requirements
 
-Для запуску цього проекту вам потрібно мати встановлені наступні інструменти:
+To run this project, you need to have the following tools installed:
 
-- [Node.js](https://nodejs.org/) (версія 16 або новіша)
-- [NPM](https://www.npmjs.com/) або [Yarn](https://yarnpkg.com/)
+- **Node.js** (version 16 or newer)
+- **NPM** or **Yarn**
 
-## Локальний запуск
+## Local Setup
 
-1. **Клонувати репозиторій**:
+1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/TravelTrucks.git
+
